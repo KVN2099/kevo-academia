@@ -1,6 +1,9 @@
-## Setting Up Your First Databricks Free Edition Environment
+---
+title: Setting Up Your First Databricks Free Edition Environment
+sidebar_position: 1
+---
 
-This guide walks you through creating a free Databricks account, understanding key limitations, and building your first notebook in minutes. Screenshot placeholders are included where you can add images later.
+This guide walks you through creating a free Databricks account, understanding key limitations, and building your first notebook in minutes.
 
 ### Prerequisites
 - **Email address**: Required for signup and verification
@@ -8,7 +11,6 @@ This guide walks you through creating a free Databricks account, understanding k
 
 ---
 
-### 1) Create your Databricks Free Edition account (step-by-step)
 1. **Open the signup page**: Go to the Databricks Community Edition signup.
    - Link: [Databricks Community Edition signup](https://community.cloud.databricks.com/signup)
    - [screenshot: Databricks signup page]

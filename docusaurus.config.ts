@@ -66,9 +66,9 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'databricks',
-        path: 'setting-up-your-first-databricks-free-edition-environment',
-        routeBasePath: 'databricks-setup',
+        id: 'databricks-setup',
+        path: 'getting-started',
+        routeBasePath: 'getting-started',
         sidebarPath: './sidebars.databricks.ts',
         editUrl:
           'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -77,9 +77,9 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'databricksCopy',
+        id: 'databricks-import',
         path: 'from-kaggle-to-databricks-your-first-data-import',
-        routeBasePath: 'databricks-import',
+        routeBasePath: 'from-kaggle-to-databricks-your-first-data-import',
         sidebarPath: './sidebars.databricksCopy.ts',
         editUrl:
           'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -103,16 +103,16 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'databricksSidebar',
-          docsPluginId: 'databricks',
+          docsPluginId: 'databricks-setup',
           position: 'left',
-          label: 'Databricks Setup',
+          label: 'Getting Started',
         },
         {
           type: 'docSidebar',
           sidebarId: 'databricksCopySidebar',
-          docsPluginId: 'databricksCopy',
+          docsPluginId: 'databricks-import',
           position: 'left',
-          label: 'Databricks Setup (Copy)',
+          label: 'Data Engineering',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
