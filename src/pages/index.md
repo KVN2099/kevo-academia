@@ -2,5 +2,5 @@
 
 Use this site to find Databricks blogs, tutorials, and news.
 
-- [Docs](/docs/intro)
+- [Docs](/databricks-setup)
 - [Blog](/blog)

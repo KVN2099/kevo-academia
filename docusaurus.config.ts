@@ -39,13 +39,7 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -68,6 +62,31 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'databricks',
+        path: 'setting-up-your-first-databricks-free-edition-environment',
+        routeBasePath: 'databricks-setup',
+        sidebarPath: './sidebars.databricks.ts',
+        editUrl:
+          'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'databricksCopy',
+        path: 'from-kaggle-to-databricks-your-first-data-import',
+        routeBasePath: 'databricks-import',
+        sidebarPath: './sidebars.databricksCopy.ts',
+        editUrl:
+          'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -83,9 +102,17 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'databricksSidebar',
+          docsPluginId: 'databricks',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Databricks Setup',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'databricksCopySidebar',
+          docsPluginId: 'databricksCopy',
+          position: 'left',
+          label: 'Databricks Setup (Copy)',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -103,7 +130,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/databricks-setup',
             },
           ],
         },
