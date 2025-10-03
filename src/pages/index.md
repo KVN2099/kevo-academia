@@ -2,5 +2,5 @@
 
 Use this site to find Databricks blogs, tutorials, and news.
 
-- [Docs](/databricks-setup)
+- [Docs](/getting-started/setting-up-your-first-databricks-free-edition-environment)
 - [Blog](/blog)

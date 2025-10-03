@@ -11,37 +11,51 @@ This guide walks you through creating a free Databricks account, understanding k
 
 ---
 
-1. **Open the signup page**: Go to the Databricks Community Edition signup.
-   - Link: [Databricks Community Edition signup](https://community.cloud.databricks.com/signup)
-   - [screenshot: Databricks signup page]
-2. **Create your account**: Provide your name, work/personal email, and set a password.
-   - Accept the terms to continue.
-   - [screenshot: account details form]
+1. **Open the signup page**: Go to the Databricks Free Edition signup.
+   - Link: [Databricks Free Edition signup](https://www.databricks.com/learn/free-edition)
+   ![@databricks-free-edition.png](/img/databricks-free-edition.png)
+2. **Create your account**: Provide your name, personal email, and set a password.
+   ![@databricks-free-edition-signup.png](/img/databricks-free-edition-signup.png)
 3. **Verify your email**: Check your inbox for a verification message and click the link.
-   - If you don’t see it, check spam/junk.
-   - [screenshot: email verification message]
-4. **Complete initial setup**: After verification, sign in at the Community Edition login page.
-   - Link: [Databricks Community Edition login](https://community.cloud.databricks.com/)
-   - You’ll land on your workspace home page.
-   - [screenshot: workspace home]
 
-Notes:
-- Community Edition is Databricks’ free, always-on offering intended for learning and small experiments.
-- If you instead start a free trial of a paid workspace, steps and limits will differ (trial expires; CE does not).
+:::note Can't find the email?
+Check your spam/junk folder if you don't see the verification message in your inbox.
+:::
+4. **Complete initial setup**: After verification, sign in at the Databricks Free Edition login page.
+   - Link: [Databricks Free Edition login](https://www.databricks.com/learn/free-edition)
+   - You’ll land on your workspace home page.
+   ![@databricks-free-edition-workspace.png](/img/databricks-free-edition-workspace.png)
+
+:::info About Databricks Free Edition
+Databricks Free Edition is Databricks' free, always-on offering intended for learning and small experiments. If you instead start a free trial of a paid workspace, steps and limits will differ (trial expires; Free Edition does not).
+:::
 
 ---
 
-### 2) Understand Free Edition limitations
-Community Edition (Free Edition) is excellent for learning, but it has constraints compared to paid tiers:
+### 2) Free Edition vs Paid Databricks
 
-- **Compute capacity**: Limited to a small single-node cluster; constrained CPU/RAM.
-- **Runtime options**: Fewer Databricks Runtime versions available than paid workspaces.
-- **Feature availability**: Many enterprise features are unavailable (e.g., Unity Catalog, Delta Live Tables, advanced Jobs, private networking, SCIM/SSO, secret scopes for external key vaults).
-- **Libraries and integrations**: Ability to install custom libraries is limited; external data source connectivity options are restricted.
-- **Storage and workspace limits**: Lower quotas for notebooks, files, and cluster usage; idle timeouts may be stricter.
-- **Support and SLAs**: No enterprise support or SLAs.
+The table below compares Databricks Free Edition with a regular paid Databricks subscription at a high level.
 
-These constraints are fine for tutorials, classroom work, and proofs-of-concept. For production or heavier experiments, consider a paid workspace.
+| Area | Free Edition | Paid Databricks (standard subscription) |
+| --- | --- | --- |
+| Compute resources | Serverless only; small sizes; no custom configs or GPUs ([Free Edition limitations](https://docs.databricks.com/aws/getting-started/community-edition-limitations)) | Full range of compute incl. custom configs, autoscaling multi-node clusters, GPU support |
+| SQL warehouses | One warehouse limited to 2X-Small  | Multiple warehouses; many sizes |
+| Jobs/Workflows | Max 5 concurrent job tasks/account  | Higher limits; advanced Workflows/Jobs |
+| Lakeflow pipelines | One active pipeline per pipeline type  | Multiple active pipelines |
+| Model Serving | Endpoint limits; no GPU endpoints; no provisioned throughput; limited models  | Full serving incl. GPU endpoints, provisioned throughput, custom models |
+| Vector Search | One endpoint; one Vector Search unit  | Multiple endpoints; scalable units |
+| Apps | One app per account; auto-stops after 24h  | Multiple apps with configurable runtimes |
+| Languages | Python only (no R/Scala)  | Python, SQL, R, Scala |
+| Workspace storage | No custom workspace storage locations  | Custom storage locations supported |
+| Online Tables | Not supported  | Supported |
+| Clean Rooms | Not supported  | Supported |
+| Admin/security | One workspace + one metastore; no account console/APIs; limited auth; no SSO/SCIM; no private networking; no compliance  | Multiple workspaces/metastores; account console/APIs; SSO/SCIM; private networking; compliance options |
+| Support & SLA | No support/SLA  | Enterprise support with SLAs |
+| Commercial use | Non‑commercial only  | Commercial use |
+| Marketplace provider | Not allowed  | Eligible |
+| Cost | Free | Usage‑based billing |
+
+Note: Exact capabilities can change and vary by cloud, region, and subscription tier. Always refer to the official Databricks documentation linked above.
 
 ---
 
