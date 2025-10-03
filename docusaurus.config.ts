@@ -66,7 +66,7 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'databricks-setup',
+        id: 'getting-started',
         path: 'getting-started',
         routeBasePath: 'getting-started',
         sidebarPath: './sidebars.databricks.ts',
@@ -103,7 +103,7 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'databricksSidebar',
-          docsPluginId: 'databricks-setup',
+          docsPluginId: 'getting-started',
           position: 'left',
           label: 'Getting Started',
         },
@@ -130,7 +130,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/databricks-setup',
+              to: '/getting-started',
             },
           ],
         },
