@@ -61,31 +61,24 @@ Note: Exact capabilities can change and vary by cloud, region, and subscription 
 
 ### 3) Create your first notebook
 
-#### A. Start (or create) a cluster
-1. In the left sidebar, click **Compute**.
-   - [screenshot: compute sidebar]
-2. Click **Create compute** (or **Create cluster**) if one doesn’t already exist.
-   - Use the default settings (name, single-node) and the default Databricks Runtime.
-   - [screenshot: create cluster dialog]
-3. Click **Create** and wait for the cluster state to become **Running**.
-   - [screenshot: cluster running]
+Databricks Free Edition uses **serverless compute**, which means you don't need to create or manage clusters manually. Compute resources start automatically when you run notebook cells. ([Learn more about Serverless Compute](https://docs.databricks.com/aws/en/compute/serverless/))
 
-Tips:
-- Free Edition typically allows only one small single-node cluster.
-- If your cluster auto-terminates, re-start it before running notebooks.
-
-#### B. Create a new notebook
-1. Click **New** → **Notebook** (or use the New button in the top bar).
-   - Name it, for example, “Hello Databricks”.
+#### A. Create a new notebook
+1. In your workspace, click **Workspace** in the left sidebar.
+2. Click **Create** → **Notebook** (or use the **Create** button).
+![@workspace-notebook.png](/img/workspace-notebook.png)
+   - Name it, for example, "Hello Databricks".
    - Choose a default language: **Python** or **SQL**.
-   - Attach to your running cluster.
-   - [screenshot: new notebook dialog]
-2. Run a simple cell to verify everything works.
-   - [screenshot: notebook first run]
+3. The notebook opens immediately—no cluster attachment needed.
+![@notebook.png](/img/notebook.png)
+#### B. Run your first cell
+1. In the first cell, enter some code (see examples below).
+2. Press **Shift+Enter** or click the **Run** icon to execute the cell.
+3. Serverless compute will start automatically (this may take a few seconds the first time).
 
-Example cells you can try:
+#### C. Example code to try
 
-Python (in a Python notebook):
+**Python** (in a Python notebook):
 ```python
 print("Spark version:", spark.version)
 
@@ -99,11 +92,12 @@ df = spark.createDataFrame(data, ["name", "score"])
 display(df)
 
 from pyspark.sql import functions as F
-df.groupBy().agg(F.avg("score").alias("avg_score")).display()
+display(df.groupBy().agg(F.avg("score").alias("avg_score")))
 ```
 
-SQL (in a SQL notebook, or in a Python/Scala notebook with a `%%sql` cell):
+**SQL** (in a SQL notebook, or add `%sql` at the top of a cell in a Python notebook):
 ```sql
+%sql
 CREATE OR REPLACE TEMP VIEW demo AS
 SELECT 1 AS id, 'Alice' AS name, 85 AS score
 UNION ALL SELECT 2, 'Bob', 92
@@ -114,17 +108,19 @@ SELECT * FROM demo;
 SELECT AVG(score) AS avg_score FROM demo;
 ```
 
-#### C. Save and share
+![@first-output.png](/img/first-output.png)
+
+#### D. Save and share
 - Use the notebook menu to **Rename**, **Export** (HTML, IPYNB), or **Clone** your work.
-- In Community Edition, collaboration features are limited compared to paid tiers.
+- In Free Edition, you can share notebooks, but advanced collaboration features are limited compared to paid tiers.
 
 ---
 
 ### 4) Helpful resources
-- **Databricks Free Edition (Community Edition)**: [Sign up or log in](https://community.cloud.databricks.com/)
+- **Databricks Free Edition**: [Sign up or log in](https://www.databricks.com/learn/free-edition)
 - **Databricks docs**:
-  - [Databricks notebooks](https://docs.databricks.com/en/notebooks/index.html)
-  - [Compute (clusters)](https://docs.databricks.com/en/compute/index.html)
+  - [Databricks notebooks](https://docs.databricks.com/aws/en/notebooks/)
+  - [Compute (clusters)](https://docs.databricks.com/aws/en/compute/)
 - **Learn Python (basics)**:
   - [Official Python tutorial](https://docs.python.org/3/tutorial/)
   - [W3Schools Python](https://www.w3schools.com/python/)
