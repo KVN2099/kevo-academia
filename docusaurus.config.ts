@@ -129,8 +129,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/getting-started',
+              label: 'Getting Started',
+              to: '/getting-started/setting-up-your-first-databricks-free-edition-environment',
             },
           ],
         },
