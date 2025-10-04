@@ -101,8 +101,8 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'databricksSidebar',
+          type: 'doc',
+          docId: 'setting-up-your-first-databricks-free-edition-environment',
           docsPluginId: 'getting-started',
           position: 'left',
           label: 'Getting Started',
