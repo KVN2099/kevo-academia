@@ -11,6 +11,7 @@ This guide walks you through creating a free Databricks account, understanding k
 
 ---
 
+### 1) Set up your account
 1. **Open the signup page**: Go to the Databricks Free Edition signup.
    - Link: [Databricks Free Edition signup](https://www.databricks.com/learn/free-edition)
    ![@databricks-free-edition.png](/img/databricks-free-edition.png)

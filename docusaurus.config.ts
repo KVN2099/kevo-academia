@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
+  title: 'Kevo Academy',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -78,8 +78,8 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'databricks-import',
-        path: 'from-kaggle-to-databricks-your-first-data-import',
-        routeBasePath: 'from-kaggle-to-databricks-your-first-data-import',
+        path: 'from-kaggle-to-databricks-your-first-data-import-unity-catalog',
+        routeBasePath: 'from-kaggle-to-databricks-your-first-data-import-unity-catalog',
         sidebarPath: './sidebars.databricksCopy.ts',
         editUrl:
           'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -94,9 +94,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Kevo Academy',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Kevo Academy Logo',
         src: 'img/logo.svg',
       },
       items: [
